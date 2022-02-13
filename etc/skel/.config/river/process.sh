@@ -1,5 +1,5 @@
 #!/usr/bin/env bash 
-swaybg -i ~/.dwm/wallpaper.jpg &
+swaybg -i ~/.config/river/wallpaper.jpg &
 killall waybar 
 killall dunst 
 killall mpd

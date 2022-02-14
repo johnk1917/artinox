@@ -5,4 +5,4 @@ killall dunst
 killall mpd
 waybar &
 dunst & 
-mpd & 
+sudo calamares &

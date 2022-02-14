@@ -165,11 +165,18 @@ riverctl float-filter-add title "popup title with spaces"
 # Set app-ids and titles of views which should use client side decorations
 riverctl csd-filter-add app-id "gedit"
 # autostart
-wlr-randr --output LVDS-1 --off
+xhost si:localuser:root
 bash ~/.config/river/process.sh
-riverctl input 1452:594:bcm5974 tap-button-map left-right-middle
-riverctl input 1452:594:bcm5974 tap enabled
-riverctl input 1452:594:bcm5974 natural-scroll enabled
+
+# Use riverctl list-inputs to list your device names
+# Replace device_name with your touchpad device here to enable tap to click
+riverctl input your_device tap-button-map left-right-middle
+
+riverctl input your_device tap enabled
+
+# Replace device_name with your touchpad device here to enable natural scrolling
+riverctl input your_device natural-scroll enabled
+
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
